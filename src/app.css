@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --color-primary-500: rgb(0, 119, 185); /* #0077b9 */
+    --color-primary-400: rgb(0, 150, 230);
+    --color-primary-300: rgb(22, 173, 255);
+
+
+
+    --color-action-500: rgb(184, 64, 0);
+    --color-action-300: rgb(230, 81, 0);
+    --color-action-100: rgb(255, 164, 115);
+
+    --animate-wiggle: wiggle 6s ease-in-out infinite;  
+    @keyframes wiggle {    
+        0%,
+        8% {
+            transform: rotate(-12deg);
+        }
+        6% {
+            transform: rotate(12deg);
+        } 
+        4% {
+            transform: rotate(-12deg);
+        }
+        2% {
+            transform: rotate(12deg);
+        } 
+    }
+}
+
+@layer components {
+    .sub-title {
+        @apply text-3xl md:text-4xl font-extrabold
+    }
+
+    .desc-title {
+        @apply text-2xl md:text-3xl font-bold
+    }
+
+    .text {
+        @apply text-base lg:text-lg
+    }
+
+    /* margins */
+
+    .base-margin-box {
+        @apply px-[10%] py-[12%] md:py-[7%]
+    }
+
+    .base-vertical-margin-box {
+        @apply py-[12%] md:py-[7%]
+    }
+}
