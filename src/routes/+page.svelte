@@ -229,9 +229,9 @@
             </div>
         </div>
     </footer>
-    <div class="bg-action-300 py-1 px-4">
+    <!-- <div class="bg-action-300 py-1 px-4">
         <p class="text-xs text-neutral-100 text-center">Made with &hearts;</p>
-    </div>
+    </div> -->
 </div>
 
 <style>

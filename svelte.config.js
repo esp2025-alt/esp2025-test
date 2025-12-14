@@ -22,7 +22,7 @@ const config = {
 			strict: true
 		}),
 		paths:{
-			base:"/esp2025-test"
+			base:""
 		}
 	}
 };
