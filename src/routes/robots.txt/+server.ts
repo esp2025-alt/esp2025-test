@@ -2,10 +2,10 @@
 export function GET() {
     return new Response(
         `User-agent: *
-  Allow: /
+    Allow: /
   
-  Sitemap: https://estoresemproblema.com/sitemap.xml
-  `,
+    Sitemap: https://estoresemproblema.com/sitemap.xml
+    `,
         {
             headers: {
                 'Content-Type': 'text/plain'
