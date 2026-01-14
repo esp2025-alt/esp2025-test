@@ -8,7 +8,7 @@
     import { split } from "$lib/func/contacts";
 
     let phone:string = "935783857";
-    let mail:string = "mail@mail.com"
+    let mail:string = "estoresemproblema@sapo.pt"
 
     const faq: Array<[string, string]> = [
         [
