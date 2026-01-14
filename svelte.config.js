@@ -1,6 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+const repoName = 'esp2025-alt'; // GitHub repo name
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
@@ -22,7 +24,7 @@ const config = {
 			strict: true
 		}),
 		paths:{
-			base:""
+			base: process.env.NODE_ENV === 'production' ? `/${repoName}` : ''
 		},
 		prerender: {
 			handleHttpError: 'warn'
