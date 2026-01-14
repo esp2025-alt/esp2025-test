@@ -10,9 +10,12 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="canonical" href="https://estoresemproblema.com/" />
+	
 	<title>Reparação de Estores - Leiria</title>
 	<meta name="description" content="A description of this page." />
-  
+	<!-- <meta http-equiv="Content-Language" content="pt-PT"> -->
+
 	<meta property="og:title" content="Reparação de Estores" />
 	<meta property="og:description" content="
 		Descubra serviços profissionais de instalação e reparação de estores em Leiria e áreas circundantes com a nossa equipa de especialistas 
