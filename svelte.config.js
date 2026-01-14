@@ -24,7 +24,7 @@ const config = {
 			strict: true
 		}),
 		paths:{
-			base: `/${repoName}`,
+			base: '',
 		},
 		prerender: {
 			handleHttpError: 'warn'
