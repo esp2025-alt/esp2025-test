@@ -43,6 +43,71 @@
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://estoresemproblema.com/" />
+
+	<script type="application/ld+json">
+		{JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "HomeAndConstructionBusiness",
+			"name": "Estores Sem Problema",
+			"url": "https://estoresemproblema.com/",
+			"telephone": "+351935783857",
+			"description": "Reparação, instalação e manutenção de estores manuais e elétricos no zona de Leiria e arredores.",
+			"image": "https://estoresemproblema.com/images/hero.jpg",
+			"address": {
+				"addressLocality": "Leiria",
+				"addressCountry": "PT"
+			},
+			"areaServed": [
+				{
+					"@type": "City",
+					"name": "Leiria"
+				},
+				{
+					"@type": "City",
+					"name": "Marinha Grande"
+				},
+				{
+					"@type": "City",
+					"name": "Batalha"
+				},
+				{
+					"@type": "City",
+					"name": "Pombal"
+				},
+				{
+					"@type": "City",
+					"name": "Ourém"
+				}
+			],
+			"makesOffer": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Reparação de estores",
+						"serviceType": "Reparação de estores"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Instalação de estores",
+						"serviceType": "Instalação de estores"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Reparação de estores elétricos",
+						"serviceType": "Reparação de estores elétricos"
+					}
+				}
+			]
+		})}
+	</script>
+
 </svelte:head>
 
 {@render children()}
