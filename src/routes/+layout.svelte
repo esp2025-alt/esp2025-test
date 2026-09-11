@@ -51,7 +51,7 @@
 			"name": "Estores Sem Problema",
 			"url": "https://estoresemproblema.com/",
 			"telephone": "+351935783857",
-			"description": "Reparação, instalação e manutenção de estores manuais e elétricos no zona de Leiria e arredores.",
+			"description": "Reparação, instalação e manutenção de estores manuais e elétricos na zona de Leiria e arredores.",
 			"image": "https://estoresemproblema.com/images/hero.jpg",
 			"address": {
 				"addressLocality": "Leiria",
