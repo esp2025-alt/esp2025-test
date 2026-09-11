@@ -23,7 +23,6 @@
 		Batalha, Pombal, Ourém e regiões próximas, combinamos conhecimento técnico com um serviço ao cliente ágil para manter a sua propriedade segura, confortável e visualmente apelativa. 
 		Com anos de experiência na indústria, preços competitivos e um compromisso com a excelência, somos os profissionais de estandartes de referência no distrito de Leiria para instalações, manutenção e reparações urgentes.
 		Escolha uma empresa local que priorize o artesanato de qualidade e resultados duradouros para cada tipo de sistema de persianas." />
-	<!-- <meta property="og:image" content="/images/preview.jpg" />   -->
 </svelte:head>
 
 {@render children()}
