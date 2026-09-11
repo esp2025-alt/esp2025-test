@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import "../app.css";
-	import favicon from '$lib/assets/window-blind.svg';
+	// import favicon from '/window-blind.ico';
 
 	export const prerender = true
 	
@@ -26,7 +26,7 @@
 </svelte:head> -->
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="/window-blind.ico" />
 	<link rel="canonical" href="https://estoresemproblema.com/" />
 
 	<title>Reparação de Estores em Leiria | Estores Sem Problema</title>
