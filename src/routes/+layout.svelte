@@ -26,7 +26,7 @@
 </svelte:head> -->
 
 <svelte:head>
-	<link rel="icon" href="/window-blind.ico" />
+	<link rel="icon" href="/favicon.ico" />
 	<link rel="canonical" href="https://estoresemproblema.com/" />
 
 	<title>Reparação de Estores em Leiria | Estores Sem Problema</title>
