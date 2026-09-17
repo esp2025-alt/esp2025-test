@@ -1,11 +1,11 @@
 <script lang="ts">
-	import './layout.css';
-	import "../app.css";
-	// import favicon from '/window-blind.ico';
+  import "./layout.css";
+  import "../app.css";
+  // import favicon from '/window-blind.ico';
 
-	export const prerender = true
-	
-	let { children } = $props();
+  export const prerender = true;
+
+  let { children } = $props();
 </script>
 
 <!-- <svelte:head>
@@ -26,88 +26,90 @@
 </svelte:head> -->
 
 <svelte:head>
-	<link rel="icon" href="/favicon.ico" />
-	<link rel="canonical" href="https://estoresemproblema.com/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://estoresemproblema.com/" />
 
-	<title>Reparação de Estores em Leiria | Estores Sem Problema</title>
+  <title>Reparação de Estores em Leiria | Estores Sem Problema</title>
 
-	<meta
-		name="description"
-		content="Reparação e montagem de estores em Leiria. Reparação de estores manuais e elétricos, interiores e exteriores, com serviço rápido e profissional."
-	/>
+  <meta
+    name="description"
+    content="Reparação e montagem de estores em Leiria. Reparação de estores manuais e elétricos, interiores e exteriores, com serviço rápido e profissional."
+  />
 
-	<meta property="og:title" content="Reparação de Estores em Leiria | Estores Sem Problema" />
-	<meta
-		property="og:description"
-		content="Reparação e montagem de estores em Leiria. Reparação de estores manuais e elétricos, interiores e exteriores, com serviço rápido e profissional."
-	/>
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://estoresemproblema.com/" />
+  <meta
+    property="og:title"
+    content="Reparação de Estores em Leiria | Estores Sem Problema"
+  />
+  <meta
+    property="og:description"
+    content="Reparação e montagem de estores em Leiria. Reparação de estores manuais e elétricos, interiores e exteriores, com serviço rápido e profissional."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://estoresemproblema.com/" />
 
-	<script type="application/ld+json">
-		{JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "HomeAndConstructionBusiness",
-			"name": "Estores Sem Problema",
-			"url": "https://estoresemproblema.com/",
-			"telephone": "+351935783857",
-			"description": "Reparação, instalação e manutenção de estores manuais e elétricos na zona de Leiria e arredores.",
-			"image": "https://estoresemproblema.com/images/hero.jpg",
-			"address": {
-				"addressLocality": "Leiria",
-				"addressCountry": "PT"
-			},
-			"areaServed": [
-				{
-					"@type": "City",
-					"name": "Leiria"
-				},
-				{
-					"@type": "City",
-					"name": "Marinha Grande"
-				},
-				{
-					"@type": "City",
-					"name": "Batalha"
-				},
-				{
-					"@type": "City",
-					"name": "Pombal"
-				},
-				{
-					"@type": "City",
-					"name": "Ourém"
-				}
-			],
-			"makesOffer": [
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "Reparação de estores",
-						"serviceType": "Reparação de estores"
-					}
-				},
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "Instalação de estores",
-						"serviceType": "Instalação de estores"
-					}
-				},
-				{
-					"@type": "Offer",
-					"itemOffered": {
-						"@type": "Service",
-						"name": "Reparação de estores elétricos",
-						"serviceType": "Reparação de estores elétricos"
-					}
-				}
-			]
-		})}
-	</script>
-
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Estores Sem Problema",
+      "url": "https://estoresemproblema.com/",
+      "telephone": "+351935783857",
+      "description": "Reparação, instalação e manutenção de estores manuais e elétricos na zona de Leiria e arredores.",
+      "image": "https://estoresemproblema.com/images/hero.jpg",
+      "address": {
+        "addressLocality": "Leiria",
+        "addressCountry": "PT"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Leiria"
+        },
+        {
+          "@type": "City",
+          "name": "Marinha Grande"
+        },
+        {
+          "@type": "City",
+          "name": "Batalha"
+        },
+        {
+          "@type": "City",
+          "name": "Pombal"
+        },
+        {
+          "@type": "City",
+          "name": "Ourém"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Reparação de estores",
+            "serviceType": "Reparação de estores"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Instalação de estores",
+            "serviceType": "Instalação de estores"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Reparação de estores elétricos",
+            "serviceType": "Reparação de estores elétricos"
+          }
+        }
+      ]
+    }
+  </script>
 </svelte:head>
 
 {@render children()}
