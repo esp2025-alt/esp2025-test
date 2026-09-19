@@ -1,0 +1,1 @@
+import{b9 as a,k as o,an as t,aE as c,af as l}from"./Dvp9lUVA.js";function s(n){t===null&&a(),c&&t.l!==null?u(t).m.push(n):o(()=>{const e=l(n);if(typeof e=="function")return e})}function u(n){var e=n.l;return e.u??={a:[],b:[],m:[]}}export{s as o};

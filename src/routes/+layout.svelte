@@ -3,8 +3,6 @@
   import "../app.css";
   // import favicon from '/window-blind.ico';
 
-  export const prerender = true;
-
   let { children } = $props();
 </script>
 
