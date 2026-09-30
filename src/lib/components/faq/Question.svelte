@@ -2,7 +2,7 @@
 	let { question, answer }: { question: string; answer: string } = $props();
 </script>
 
-<details class="question">
+<details class="question" name="service-faq">
 	<summary>{question}<span class="question-indicator" aria-hidden="true"></span></summary>
-	<p>{answer}</p>
+	<div class="question-answer"><p>{answer}</p></div>
 </details>

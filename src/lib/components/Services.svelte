@@ -29,7 +29,7 @@
 							height="400"
 							loading="lazy"
 							decoding="async"
-						/><span>{service.number}</span>
+						/>
 					</div>
 					<div class="service-body">
 						<h3>{service.title}</h3>

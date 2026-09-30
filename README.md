@@ -47,9 +47,17 @@ Keep the canonical domain in `site.ts`, `static/CNAME`, `static/sitemap.xml` and
 
 Main reading text uses `1rem`, secondary text `0.875rem`, and decorative labels `0.75rem`. Headings use rem-based responsive limits so browser text-size preferences are respected. Links and disclosure controls have at least 44×44px touch targets.
 
-At widths up to 1080px, a native **Menu** disclosure replaces the crowded section-link row. PT/EN remains visible beside it. The menu can be opened with Enter or Space, dismissed with Escape or an outside tap, and closes after selecting a section. It also opens without JavaScript. The compact header is retained; enlarged text can wrap, and anchor offsets track the actual header height.
+At widths up to 1080px, a native **Menu** disclosure replaces the crowded section-link row. PT/EN remains visible beside it. The menu can be opened with Enter or Space, dismissed with Escape or an outside tap, and closes after selecting a section. It also opens without JavaScript. The dropdown fades and slides over 220ms, with a rotating chevron; unsupported browsers keep instant disclosure. The compact header is retained; enlarged text can wrap, and anchor offsets track the actual header height.
 
 When verifying layout changes, check both languages at 320px and larger, with normal and 200% text size. Keep the phone, language switch and menu accessible at both sizes.
+
+Buttons and service cards have subtle hover transitions on devices with a mouse or trackpad. The mobile contact bar fades in with a short upward movement. Reduced-motion preferences disable these effects. Service cards use their titles without decorative numbering; the process section keeps its numbered steps.
+
+## FAQ interaction
+
+The FAQ uses a shared `name="service-faq"` on native details elements to keep at most one answer open. Answers expand/collapse and fade over 260ms; the plus/minus icon follows the same timing. Reduced-motion preferences turn these effects off.
+
+The behavior does not depend on client JavaScript. CSS animation is progressively enhanced with `::details-content` and discrete transitions; browsers lacking those features retain normal instant disclosure. See the [native grouping reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details) and [details-content animation reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content).
 
 ## Mobile contact bar
 

@@ -1,5 +1,20 @@
 # Project review and changes
 
+## 2026-09-30 — Menu motion and cleaner service cards
+
+- Removed the decorative service-card numbers and their unused Portuguese/English data and badge styles. These cards describe separate categories, not sequential steps; process-step numbers remain useful and unchanged.
+- Added a 220ms fade/slide for opening and closing the mobile/tablet menu, with a rotating chevron and gentle link highlight transitions. Native disclosure, keyboard controls and no-JavaScript operation are preserved; unsupported browsers keep instant opening/closing.
+- Added subtle button and service-card lift/shadow transitions for devices with fine pointers and hover support, plus a 240ms entrance for the mobile contact bar.
+- Disabled the new effects when reduced motion is requested. No dependencies added. Updated the README and rebuilt `/docs` for GitHub Pages.
+
+## 2026-09-30 — Single-open, animated FAQ
+
+- Grouped the FAQ disclosures with the native `name="service-faq"` attribute: opening an answer closes the previous one, and clicking the open question closes it. The mobile menu is outside this group.
+- Added a 260ms expand/collapse and fade transition, plus a matching plus/minus indicator transition. A wrapper keeps long answers fully visible when open without a fixed height limit.
+- Kept native summary keyboard behavior and prerendered answers; no additional JavaScript or dependency is needed. Reduced-motion preferences disable the transitions, including the details-content pseudo-element. Browsers without the required animation CSS retain immediate disclosure behavior.
+- Rebuilt `/docs` and updated the maintenance notes.
+- Validation: type checks and the production build passed with zero warnings/errors. Chromium checks passed in Portuguese and English at 320, 390 and 1440px, measuring intermediate opening/closing heights and verifying one open answer, Enter/Space activation, repeated toggles, reduced motion and operation without JavaScript. No runtime errors or horizontal overflow.
+
 ## 2026-09-30 — Mobile contact bar
 
 - Added fixed Call / WhatsApp actions at phone widths up to 760px; the bar and its spacer are hidden on larger screens.

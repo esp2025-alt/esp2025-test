@@ -82,7 +82,6 @@ export const en: typeof pt = {
 	],
 	services: [
 		{
-			number: '01',
 			title: 'Manual blinds',
 			image: 'manual.jpg',
 			alt: 'An indoor blind being operated manually beside a window',
@@ -91,7 +90,6 @@ export const en: typeof pt = {
 			details: ['Straps, winders and cranks', 'Slats, shafts and alignment']
 		},
 		{
-			number: '02',
 			title: 'Electric blinds',
 			image: 'placeholder.jpg',
 			alt: 'An electric roller shutter operated with a remote control',
@@ -100,7 +98,6 @@ export const en: typeof pt = {
 			details: ['Motors, remotes and switches', 'Installation and motorisation']
 		},
 		{
-			number: '03',
 			title: 'Indoor and outdoor',
 			image: 'exterior.jpg',
 			alt: 'A technician working on an exterior roller shutter beside a window',

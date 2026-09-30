@@ -111,7 +111,7 @@ h3 {
 	font-size: 0.875rem;
 	font-weight: 650;
 	line-height: 1.4;
-	transition: background 0.2s, border-color 0.2s;
+	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.18s ease;
 }
 .button:hover {
 	background: var(--accent-hover);
@@ -407,6 +407,7 @@ h1 > span {
 	gap: 24px;
 }
 .service-card {
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	overflow: hidden;
@@ -426,20 +427,6 @@ h1 > span {
 }
 .service-card:hover .service-image img {
 	transform: scale(1.025);
-}
-.service-image > span {
-	position: absolute;
-	left: 18px;
-	top: 18px;
-	background: #fff;
-	color: var(--ink);
-	width: 34px;
-	height: 34px;
-	display: grid;
-	place-items: center;
-	border-radius: 3px;
-	font-size: 0.875rem;
-	font-weight: 650;
 }
 .service-body {
 	padding: 26px;
@@ -637,14 +624,33 @@ h1 > span {
 }
 .question-indicator::after {
 	transform: rotate(90deg);
+	transition: transform 0.26s ease;
 }
 .question[open] .question-indicator::after {
 	transform: rotate(0);
 }
-.question > p {
+.question-answer > p {
 	color: var(--muted);
 	font-size: 1rem;
 	padding: 0 30px 23px 0;
+}
+/* Native exclusive disclosures; older browsers retain immediate open/close. */
+@supports selector(::details-content) and (transition-behavior: allow-discrete) {
+	.question::details-content {
+		display: grid;
+		grid-template-rows: 0fr;
+		opacity: 0;
+		transition: grid-template-rows 0.26s ease, opacity 0.26s ease,
+			content-visibility 0.26s allow-discrete;
+	}
+	.question[open]::details-content {
+		grid-template-rows: 1fr;
+		opacity: 1;
+	}
+	.question-answer {
+		min-height: 0;
+		overflow: hidden;
+	}
 }
 .contact {
 	background: #f7eee6;
@@ -1031,7 +1037,8 @@ h1 > span {
 	transition: font-size 0.22s ease;
 }
 .site-header .button-small {
-	transition: font-size 0.22s ease, padding 0.22s ease, background 0.2s ease;
+	transition: font-size 0.22s ease, padding 0.22s ease, background 0.2s ease, box-shadow 0.2s,
+		transform 0.18s ease;
 }
 .site-header .button-small svg {
 	transition: width 0.22s ease, height 0.22s ease;
@@ -1140,8 +1147,7 @@ h1 > span {
 .hero-copy .eyebrow,
 .utility-bar,
 .utility-inner > span:last-child,
-.hero-caption > span,
-.service-image > span {
+.hero-caption > span {
 	font-size: 0.75rem;
 }
 .utility-inner {
@@ -1273,6 +1279,7 @@ h3 {
 	border-right: 2px solid currentColor;
 	border-bottom: 2px solid currentColor;
 	transform: translateY(-2px) rotate(45deg);
+	transition: transform 0.22s ease;
 }
 .mobile-menu[open] .menu-chevron {
 	transform: translateY(2px) rotate(225deg);
@@ -1352,8 +1359,8 @@ h3 {
 		position: fixed;
 		inset: auto 0 0;
 		z-index: 30;
-		padding: 12px max(16px, env(safe-area-inset-right))
-			calc(12px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+		padding: 12px max(16px, env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom))
+			max(16px, env(safe-area-inset-left));
 		border-top: 1px solid var(--line);
 		background: #fff;
 		box-shadow: 0 -4px 18px #122e4112;
@@ -1368,7 +1375,71 @@ h3 {
 		overflow-wrap: anywhere;
 	}
 }
+/* Animate the native menu without changing its layout or keyboard behavior. */
+@supports selector(::details-content) and (transition-behavior: allow-discrete) {
+	.mobile-menu::details-content {
+		position: absolute;
+		top: calc(100% + 1px);
+		inset-inline: 16px;
+		opacity: 0;
+		transform: translateY(-8px);
+		pointer-events: none;
+		transition: opacity 0.22s ease, transform 0.22s ease, content-visibility 0.22s allow-discrete;
+	}
+	.mobile-menu[open]::details-content {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+	.mobile-menu-links {
+		position: static;
+	}
+}
+.desktop-nav a,
+.mobile-nav a,
+.footer-top nav a,
+.contact-links a,
+.text-link {
+	transition: color 0.18s ease, background 0.18s ease;
+}
+.mobile-menu-links a:hover,
+.mobile-menu-links a:focus-visible {
+	background: #e3ebee;
+	color: var(--blue);
+}
+@media (hover: hover) and (pointer: fine) {
+	.button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px #122e4118;
+	}
+	.button:active {
+		transform: translateY(0);
+	}
+	.service-card:hover,
+	.service-card:focus-within {
+		transform: translateY(-3px);
+		border-color: #bacbd4;
+		box-shadow: 0 10px 24px #122e4112;
+	}
+}
+@keyframes mobile-contact-enter {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.mobile-contact-bar:not([hidden]) {
+	animation: mobile-contact-enter 0.24s ease-out;
+}
 @media (prefers-reduced-motion: reduce) {
+	.question::details-content,
+	.mobile-menu::details-content {
+		transition: none;
+	}
 	html {
 		scroll-behavior: auto;
 	}
@@ -1377,5 +1448,12 @@ h3 {
 	*::after {
 		transition: none !important;
 		animation: none !important;
+	}
+	.button:hover,
+	.button:active,
+	.service-card:hover,
+	.service-card:focus-within,
+	.service-card:hover .service-image img {
+		transform: none;
 	}
 }

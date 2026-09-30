@@ -7,7 +7,6 @@ const navigation = [
 ];
 const services = [
 	{
-		number: '01',
 		title: 'Estores manuais',
 		image: 'manual.jpg',
 		alt: 'Estore interior acionado manualmente junto a uma janela',
@@ -16,7 +15,6 @@ const services = [
 		details: ['Fitas, enroladores e manivelas', 'Lamelas, eixos e alinhamento']
 	},
 	{
-		number: '02',
 		title: 'Estores elétricos',
 		image: 'placeholder.jpg',
 		alt: 'Estore elétrico acionado com um comando',
@@ -25,7 +23,6 @@ const services = [
 		details: ['Motores, comandos e interruptores', 'Instalação e motorização']
 	},
 	{
-		number: '03',
 		title: 'Interiores e exteriores',
 		image: 'exterior.jpg',
 		alt: 'Técnico a trabalhar num estore exterior junto a uma janela',
