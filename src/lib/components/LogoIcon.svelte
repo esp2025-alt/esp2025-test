@@ -1,8 +1,9 @@
 <script lang="ts">
-	let { color = "currentColro", size = 16 } = $props();
+	let { color = 'currentColor', size = 16 } = $props();
 </script>
 
 <svg
+	aria-hidden="true"
 	fill={color}
 	height="{size}px"
 	width="{size}px"
